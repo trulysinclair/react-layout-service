@@ -4,8 +4,6 @@ import "./index.css";
 export type Part = {
   id: string;
   part: () => JSX.Element;
-  parent: string;
-  type: "leaf" | "branch";
 };
 
 const Part = (props: Part) => {
@@ -121,8 +119,6 @@ ClientDOM.createRoot(
             titlebar
           </header>
         )}
-        parent="workbench"
-        type="leaf"
       />
     </SplitItem>
     <SplitItem offset={29} orientation="vertical" size={600}>
@@ -141,8 +137,6 @@ ClientDOM.createRoot(
                 activitybar
               </div>
             )}
-            parent="workbench"
-            type="leaf"
           />
         </SplitItem>
         <SplitItem offset={49} orientation="horizontal" size={200}>
@@ -157,8 +151,6 @@ ClientDOM.createRoot(
                 sidebar
               </div>
             )}
-            parent="workbench"
-            type="leaf"
           />
         </SplitItem>
         <SplitItem offset={250} orientation="horizontal" size={400}>
@@ -179,8 +171,6 @@ ClientDOM.createRoot(
                 content
               </div>
             )}
-            parent="workbench"
-            type="leaf"
           />
         </SplitItem>
       </Branch>
@@ -203,8 +193,6 @@ ClientDOM.createRoot(
             statusbar
           </footer>
         )}
-        parent="workbench"
-        type="leaf"
       />
     </SplitItem>
   </Workbench>,
